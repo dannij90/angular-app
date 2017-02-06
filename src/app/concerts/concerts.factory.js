@@ -11,14 +11,14 @@
 	 */
 
 	/**
-	 * appFactory
+	 * concertsFactory
 	 */
 	angular
 		.module('myApp')
-		.factory('appFactory', appFactory);
+		.factory('concertsFactory', concertsFactory);
 
 	/* @ngInject */
-	function appFactory ($http) {
+	function concertsFactory ($http) {
 		var service = {
 			getData: getData,
 			save: save,

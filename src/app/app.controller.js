@@ -21,7 +21,7 @@
 		.controller('AppCtrl', AppCtrl);
 
 	/* @ngInject */
-	function AppCtrl (appFactory) {
+	function AppCtrl (concertsFactory) {
 		// "Controller as" the ViewModel
 		var vm = this;
 
@@ -49,7 +49,7 @@
 		function buttonClick () {
 			vm.loading = true;
             console.log("button has been clicked");
-            appFactory.getConcerts().then(dataSuccess, dataError);
+            concertsFactory.getConcerts().then(dataSuccess, dataError);
 
             function dataSuccess(res){
             	vm.concerts = res.data.results;
