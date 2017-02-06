@@ -9,7 +9,18 @@
 <body ng-app="myApp" ng-controller="AppCtrl as vm">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.js"></script>
 <script src="app.module.js"></script>
+<script src="app.factory.js"></script>
 <script src="app.controller.js"></script>
 
+
+<div>
+    {{vm.text}}
+</div>
+
+<input type="text" ng-model="vm.name">
+
+<button type="button" ng-click="vm.buttonClick()">
+    Click me
+</button>
 </body>
 </html>

@@ -21,14 +21,14 @@
 		.controller('AppCtrl', AppCtrl);
 
 	/* @ngInject */
-	function AppCtrl () {
+	function AppCtrl (appFactory) {
 		// "Controller as" the ViewModel
 		var vm = this;
 
 		// Public ViewModel
 		// --------------------------------------------------
 		vm.data = [];
-		vm.someFunction = someFunction;
+		vm.buttonClick = buttonClick;
 
 		// Run
 		// --------------------------------------------------
@@ -41,8 +41,9 @@
 
 		}
 
-		function someFunction () {
-
+		function buttonClick () {
+            console.log("button has been clicked");
+            vm.text = appFactory.getData();
 		}
 	}
 
