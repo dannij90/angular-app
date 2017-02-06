@@ -27,29 +27,38 @@
 		// --------------------------------------------------
 		vm.schedule = [];
 		vm.loading = false;
+		vm.showSchedule = showSchedule;
 
 		// Run
 		// --------------------------------------------------
 		activate();
 
+		// TODO: create a specific method to get TV schedule with a parameter
+        // TODO: create a dropdown in HTML that calls the method with the TV channel
+
 		// Private functions
 		// --------------------------------------------------
 		function activate () {
 			vm.loading = true;
-			tvFactory.getTvSchedule().then(onSuccess, onError);
-
-			function onSuccess(res){
-				vm.loading = false;
-				vm.schedule = res.data.results;
-
-			}
-
-			function onError(err){
-				vm.loading = false;
-				console.log("error");
-			}
+			showSchedule('ruv');
 
 		}
+
+		function showSchedule(tvChannel){
+            vm.loading = true;
+            tvFactory.getTvSchedule(tvChannel).then(onSuccess, onError);
+
+            function onSuccess(res){
+                vm.loading = false;
+                vm.schedule = res.data.results;
+
+            }
+
+            function onError(err){
+                vm.loading = false;
+                console.log("error");
+            }
+        }
 
 	}
 

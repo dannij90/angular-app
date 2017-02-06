@@ -27,8 +27,8 @@
 
 		// Private functions
 		// --------------------------------------------------
-		function getTvSchedule () {
-		    return $http.get("http://apis.is/tv/ruv");
+		function getTvSchedule (tvChannel) {
+		    return $http.get("http://apis.is/tv/" + tvChannel);
 
 		}
 
