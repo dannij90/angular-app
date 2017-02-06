@@ -8,11 +8,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body ng-app="myApp" ng-controller="AppCtrl as vm">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.js"></script>
-<script src="app.module.js"></script>
-<script src="app.factory.js"></script>
-<script src="app.controller.js"></script>
-<script src="concerts/concerts.component.js"></script>
+
 
 
 
@@ -31,6 +27,14 @@
     <div ng-if="vm.errorMessage">{{vm.errorMessage}}</div>
     <div ng-if="vm.loading" style="text-align:center"><i class="fa fa-refresh fa-spin fa-2x" aria-hidden="true"></i></div>
     <concerts concerts-data="vm.concerts"></concerts>
+    <h1>Tv Schedule</h1>
+    <tv-schedule></tv-schedule>
 </div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.js"></script>
+<script src="app.module.js"></script>
+<script src="app.factory.js"></script>
+<script src="app.controller.js"></script>
+<script src="concerts/concerts.component.js"></script>
+<script src="tv/tv-schedule.component.js"></script>
 </body>
 </html>
