@@ -1,2 +1,6 @@
 <div>Here is the TV schedule</div>
-
+<div ng-if="vm.loading" style="text-align:center"><i class="fa fa-refresh fa-spin fa-2x" aria-hidden="true"></i></div>
+<div ng-repeat="tvShow in vm.schedule">
+    <date>{{tvShow.startTime}}</date>
+    <h3 ng-bind="tvShow.title"></h3>
+</div>
