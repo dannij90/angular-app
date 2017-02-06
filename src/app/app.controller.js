@@ -47,7 +47,17 @@
 
 		function buttonClick () {
             console.log("button has been clicked");
-            vm.concerts = appFactory.getConcerts();
+            appFactory.getConcerts().then(dataSuccess, dataError);
+
+            function dataSuccess(res){
+            	vm.concerts = res.data.results;
+            	console.log("data", data);
+			}
+
+			function dataError(data){
+            	vm.errorMessage = "Could not fetch data";
+
+			}
 		}
 	}
 

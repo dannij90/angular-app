@@ -18,7 +18,7 @@
 		.factory('appFactory', appFactory);
 
 	/* @ngInject */
-	function appFactory () {
+	function appFactory ($http) {
 		var service = {
 			getData: getData,
 			save: save,
@@ -39,24 +39,9 @@
 		}
 
 		function getConcerts(){
-		    var concerts = [{
-                "eventDateName": "Tónleikar - Gestur frá gamla landinu",
-                "name": "Tónleikar - Gestur frá gamla landinu",
-                "dateOfShow": "2017-02-11T14:00:00",
-                "userGroupName": "Hannesarholt ses",
-                "eventHallName": "Hljóðberg (Hannesarholt)",
-                "imageSource": "https://d30qys758zh01z.cloudfront.net/images/medium/1.9935.jpg"
-            },
-                {
-                    "eventDateName": "Papar í Hlégarði",
-                    "name": "Tónleikar",
-                    "dateOfShow": "2017-02-11T23:59:00",
-                    "userGroupName": "prime ehf",
-                    "eventHallName": "Hlégarður",
-                    "imageSource": "https://d30qys758zh01z.cloudfront.net/images/medium/1.9938.jpg"
-                }];
 
-		    return concerts;
+
+		    return $http.get("https://apis.is/concerts");
         }
 	}
 

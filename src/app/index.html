@@ -25,8 +25,8 @@
 
 <div>
     <h1>Concerts in Iceland</h1>
-
-    <table>
+    <div ng-if="vm.errorMessage">{{vm.errorMessage}}</div>
+    <table nf-if="vm.concerts.length">
         <thead>
             <tr>
                 <th>Event Name</th>
