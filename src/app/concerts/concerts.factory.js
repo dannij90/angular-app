@@ -20,8 +20,6 @@
 	/* @ngInject */
 	function concertsFactory ($http) {
 		var service = {
-			getData: getData,
-			save: save,
             getConcerts: getConcerts
 
 		};
@@ -30,14 +28,6 @@
 
 		// Private functions
 		// --------------------------------------------------
-		function getData () {
-	        return "Hello from factory";
-		}
-
-		function save () {
-
-		}
-
 		function getConcerts(){
 
 
