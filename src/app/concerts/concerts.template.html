@@ -1,0 +1,20 @@
+<table ng-if="vm.concertsData.length">
+    <thead>
+    <tr>
+        <th>Event Name</th>
+        <th>Date</th>
+        <th>Group Name</th>
+        <th>Hall Name</th>
+        <th>Image</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr ng-repeat="concert in vm.concertsData">
+        <td>{{ concert.name }}</td>
+        <td>{{ concert.dateOfShow }}</td>
+        <td>{{ concert.userGroupName }}</td>
+        <td>{{ concert.eventHallName}}</td>
+        <td><img ng-src="{{concert.imageSource}}"/></td>
+    </tr>
+    </tbody>
+</table>

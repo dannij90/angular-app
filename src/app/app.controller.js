@@ -29,6 +29,7 @@
 		// --------------------------------------------------
 		vm.data = [];
 		vm.concerts = [];
+		vm.loading = false;
 
 
         vm.buttonClick = buttonClick;
@@ -46,16 +47,18 @@
 		}
 
 		function buttonClick () {
+			vm.loading = true;
             console.log("button has been clicked");
             appFactory.getConcerts().then(dataSuccess, dataError);
 
             function dataSuccess(res){
             	vm.concerts = res.data.results;
-            	console.log("data", data);
+            	vm.loading = false;
 			}
 
 			function dataError(data){
             	vm.errorMessage = "Could not fetch data";
+            	vm.loading = false;
 
 			}
 		}
