@@ -22,5 +22,30 @@
 <button type="button" ng-click="vm.buttonClick()">
     Click me
 </button>
+
+<div>
+    <h1>Concerts in Iceland</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Event Name</th>
+                <th>Date</th>
+                <th>Group Name</th>
+                <th>Hall Name</th>
+                <th>Image</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="concert in vm.concerts">
+                <td>{{ concert.name }}</td>
+                <td>{{ concert.dateOfShow }}</td>
+                <td>{{ concert.userGroupName }}</td>
+                <td>{{ concert.eventHallName}}</td>
+                <td><img ng-src="{{concert.imageSource}}"/></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
 </body>
 </html>

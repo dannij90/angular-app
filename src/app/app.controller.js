@@ -28,7 +28,11 @@
 		// Public ViewModel
 		// --------------------------------------------------
 		vm.data = [];
-		vm.buttonClick = buttonClick;
+		vm.concerts = [];
+
+
+        vm.buttonClick = buttonClick;
+
 
 		// Run
 		// --------------------------------------------------
@@ -43,7 +47,7 @@
 
 		function buttonClick () {
             console.log("button has been clicked");
-            vm.text = appFactory.getData();
+            vm.concerts = appFactory.getConcerts();
 		}
 	}
 
