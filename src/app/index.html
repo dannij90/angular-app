@@ -16,20 +16,25 @@
     {{vm.text}}
 </div>
 
-<input type="text" ng-model="vm.name">
 
-<button type="button" ng-click="vm.buttonClick()">
-    Click me
-</button>
-
-<div>
+<div style="float:left; width: 500px">
     <h1>Concerts in Iceland</h1>
     <div ng-if="vm.errorMessage">{{vm.errorMessage}}</div>
+    <button type="button" ng-click="vm.buttonClick()">
+    Click me
+</button>
     <div ng-if="vm.loading" style="text-align:center"><i class="fa fa-refresh fa-spin fa-2x" aria-hidden="true"></i></div>
     <concerts concerts-data="vm.concerts"></concerts>
     <h1>Tv Schedule</h1>
     <tv-schedule></tv-schedule>
+
 </div>
+<div style="float:left; width: 500px">
+    <h1>Gas stations in Iceland</h1>
+    <petrol></petrol>
+
+</div>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.js"></script>
 <script src="app.module.js"></script>
 <script src="concerts/concerts.factory.js"></script>
@@ -37,5 +42,8 @@
 <script src="concerts/concerts.component.js"></script>
 <script src="tv/tv.factory.js"></script>
 <script src="tv/tv-schedule.component.js"></script>
+<script src="petrol/petrol.factory.js"></script>
+<script src="petrol/petrol.component.js"></script>
+
 </body>
 </html>
