@@ -27,7 +27,7 @@
 		// --------------------------------------------------
 		vm.schedule = [];
 		vm.loading = false;
-		vm.showSchedule = showSchedule;
+		//vm.showSchedule = showSchedule;
 		vm.changeChannel = changeChannel;
 		vm.selectedTvChannel = "ruv";
 
@@ -43,7 +43,7 @@
 		// --------------------------------------------------
 		function activate () {
 			vm.loading = true;
-			showSchedule(vm.selectedTvChannel);
+			changeChannel();
 
 		}
 
@@ -62,7 +62,7 @@
             }
 
 		}
-
+/*
 		function showSchedule(tvChannel){
             vm.loading = true;
             tvFactory.getTvSchedule(tvChannel).then(onSuccess, onError);
@@ -77,7 +77,7 @@
                 vm.loading = false;
                 console.log("error");
             }
-        }
+        }*/
 
 	}
 
