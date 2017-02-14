@@ -1,15 +1,42 @@
-@base-color: #333;
+@import (reference) "../../../node_modules/legolize/legolize";
 @app-header-backgroundColor: #A92B1D;
 @app-nav-item-selectedBackgroundColor: white;
 
+@base-fontFamily: Helvetica Neue, Helvetica, Arial, Tahoma, Verdana, Helvetica, Sans-Serif;
+@base-heading-fontFamily: 'Open Sans', sans-serif;
+@base-fontSize: 16px;
+@base-lineHeight: 24px;
+@base-color: #333;
+@base-color--light: #8991a5;
+@base-backgroundColor: #fff;
+@base-borderColor: #dadde3;
+//@base-imagePath: ~"/assets/img";
+//@base-fontPath: "../fonts";
+
+// Modifiers
+@base-fontSize--xs: (@base-fontSize - 2px);
+@base-fontSize--sm: (@base-fontSize - 1px);
+@base-fontSize--md: (@base-fontSize + 1px);
+@base-fontSize--lg: (@base-fontSize + 2px);
+@base-fontSize--xl: (@base-fontSize + 4px);
+
+// -------------------- Branding --------------------
+@brand-primary: #6a981e;
+@brand-secondary: #1a1f26;
+@brand-success: #6a981e;
+@brand-warning: #f8c11c;
+@brand-danger: #eb5c5b;
+
 @import "legos/panel";
+@import "legos/table";
+@import "legos/button";
 
 body {
   background-color: #e4e4e4;
   margin: 0;
   padding: 0;
   font-family: Arial;
-  font-size: 16px;
+  font-size: @base-fontSize;
   color: @base-color;
 
   * {

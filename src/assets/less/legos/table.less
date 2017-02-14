@@ -1,0 +1,50 @@
+/********************************************
+	Table
+********************************************/
+
+/// Naming conventions:
+// LegoName
+// LegoName--modifierName
+// LegoName-descendantName
+// LegoName.is-stateOfLego
+// Variable names:
+// @legoModifier-property ex: @buttonPrimary-borderColor
+// @legoModifier-descendand-property ex: @listGroup-itemHeading-fontSize
+
+// -------------------- Variables --------------------
+
+//Table variables
+@table-bg: transparent;
+@table-bg-hover: #f5f5f5;
+@table-bg-active: @table-bg-hover;
+@table-borderWidth: 1px;
+@table-borderStyle: solid;
+@table-borderColor: #d8d8d8;
+
+//Table caption
+@table-caption--paddingVertical: 10px;
+@table-caption--paddingHorizontal: 5px;
+
+//Table cell variables
+@table-cell--paddingVertical: 10px;
+@table-cell--paddingHorizontal: 5px;
+@table-cell-borderWidth: 1px;
+
+//Table head variables
+@table-head-cell-borderWidth: 2px;
+
+//Table footer variables
+@table-footer-cell-borderWidth: 2px;
+
+//Table striped variables
+@Table--striped-bgColor: #f9f9f9;
+
+
+// -------------------- Core LEGO --------------------
+.table {
+  .Table();
+
+  td {
+    .Table-cell();
+  }
+}
