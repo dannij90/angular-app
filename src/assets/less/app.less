@@ -1,0 +1,53 @@
+@base-color: #333;
+@app-header-backgroundColor: #A92B1D;
+@app-nav-item-selectedBackgroundColor: white;
+
+@import "legos/panel";
+
+body {
+  background-color: #e4e4e4;
+  margin: 0;
+  padding: 0;
+  font-family: Arial;
+  font-size: 16px;
+  color: @base-color;
+
+  * {
+    box-sizing: border-box;
+  }
+}
+
+.app-header {
+  overflow: hidden;
+  background-color: @app-header-backgroundColor;
+}
+.container {
+  width: 960px;
+  margin: 0 auto;
+}
+
+.app-nav {
+  overflow: hidden;
+  margin-top: 50px;
+  ul, li{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  a {
+    display: block;
+    float: left;
+    padding: 5px 10px;
+    margin: 0 2px 0 0;
+    background-color: #ccc;
+    color: @base-color;
+    text-decoration: none;
+
+  }
+  .selected {
+    a {
+      background-color: @app-nav-item-selectedBackgroundColor;
+    }
+  }
+
+}

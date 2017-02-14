@@ -6,21 +6,45 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>My first angular app</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="app.min.css">
 </head>
-<body ng-app="myApp" ng-controller="AppCtrl as vm">
+<body ng-app="myApp" ng-controller="AppCtrl as vm" class="app">
 
-<nav>
-    <ul>
-        <li>
-            <a ui-sref="home">Home</a>
-            <a ui-sref="tv">TV</a>
-            <a ui-sref="petrol">Petrol</a>
-            <a ui-sref="concerts">Concerts</a>
-        </li>
-    </ul>
-</nav>
+<header class="app-header">
+    <div class="container">
+        <nav class="app-nav">
+            <ul>
+                <li class="selected">
+                    <a ui-sref="home">Home</a></li>
+                <li>
+                    <a ui-sref="tv">TV</a>
+                </li>
+                <li>
+                    <a ui-sref="petrol">Petrol</a>
+                </li>
+                <li>
+                    <a ui-sref="concerts">Concerts</a>
+                </li>
 
-<ui-view></ui-view>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+
+<main class="container">
+    <div class="panel">
+        <ui-view>
+
+        </ui-view>
+    </div>
+
+</main>
+
+<footer>
+
+</footer>
 
 <script src="app.min.js"></script>
 
