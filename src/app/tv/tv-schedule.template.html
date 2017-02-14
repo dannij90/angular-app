@@ -1,4 +1,14 @@
 <div>Here is the TV schedule</div>
+<div>
+    <select ng-change="vm.changeChannel()" ng-model="vm.selectedTvChannel">
+        <option value="ruv">Rúv</option>
+        <option value="stod2">Stöð 2</option>
+    </select>
+</div>
+<br>
+<br>
+
+
 <button ng-click="vm.showSchedule('ruv')">Rúv</button>
 <button ng-click="vm.showSchedule('stod2')">Stöð 2</button>
 
