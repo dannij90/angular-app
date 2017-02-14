@@ -15,7 +15,29 @@
 	 */
 	angular
 		.module('myApp')
-		.directive('petrolHome', petrolHomeComponent);
+		.directive('petrolHome', petrolHomeComponent)
+		.controller('PetrolHomeCtrl', PetrolHomeCtrl);
+
+	/* @ngInject */
+	function PetrolHomeCtrl ($rootScope) {
+		// "Controller as" the ViewModel
+		var vm = this;
+
+		// Public ViewModel
+		// --------------------------------------------------
+
+
+		// Run
+		// --------------------------------------------------
+		activate();
+
+		// Private functions
+		// --------------------------------------------------
+		function activate () {
+            $rootScope.$emit('selectedPage', 'petrol')
+		}
+
+	}
 
 	/* @ngInject */
 	function petrolHomeComponent () {
@@ -26,9 +48,9 @@
 
 			},
 			//require: '^outerDirectiveName', // If this directive requires another directive
-			//controller: 'ControllerName', // Controller used for this directive
-			//controllerAs: 'vm', // ViewModel for controller
-			// bindToController: true // When set to true in a directive with isolated scope that uses controllerAs, the component’s properties are bound to the controller rather than to the scope.
+			controller: 'PetrolHomeCtrl', // Controller used for this directive
+			controllerAs: 'vm', // ViewModel for controller
+			bindToController: true // When set to true in a directive with isolated scope that uses controllerAs, the component’s properties are bound to the controller rather than to the scope.
 			//replace: true, // Replace the HTML element on which the directive is attached
 			//transclude: false, // Lets us wrap a directive around arbitrary content
 		};

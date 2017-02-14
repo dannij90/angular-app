@@ -21,13 +21,14 @@
 		.controller('AppCtrl', AppCtrl);
 
 	/* @ngInject */
-	function AppCtrl (concertsFactory) {
+	function AppCtrl (concertsFactory, $rootScope) {
 		// "Controller as" the ViewModel
 		var vm = this;
 
 		// Public ViewModel
 		// --------------------------------------------------
 
+		vm.selectedPage = "home";
 		// Run
 		// --------------------------------------------------
 		activate();
@@ -35,7 +36,9 @@
 		// Private functions
 		// --------------------------------------------------
 		function activate () {
-		    console.log("Hello world");
+		    $rootScope.$on('selectedPage', function(e, value){
+		    	vm.selectedPage = value;
+			})
 
 		}
 

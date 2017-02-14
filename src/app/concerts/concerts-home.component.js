@@ -19,7 +19,7 @@
 		.controller('ConcertsHomeCtrl', ConcertsHomeCtrl);
 
 		/* @ngInject */
-		function ConcertsHomeCtrl (concertsFactory) {
+		function ConcertsHomeCtrl (concertsFactory, $rootScope) {
 			// "Controller as" the ViewModel
 			var vm = this;
 
@@ -36,6 +36,7 @@
 			// Private functions
 			// --------------------------------------------------
 			function activate () {
+                $rootScope.$emit('selectedPage', 'concerts')
 				getConcertsData();
 			}
 

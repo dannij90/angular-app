@@ -14,15 +14,15 @@
     <div class="container">
         <nav class="app-nav">
             <ul>
-                <li class="selected">
+                <li ng-class="{'selected':vm.selectedPage === 'home'}">
                     <a ui-sref="home">Home</a></li>
-                <li>
+                <li ng-class="{'selected':vm.selectedPage === 'tv'}">
                     <a ui-sref="tv">TV</a>
                 </li>
-                <li>
+                <li ng-class="{'selected':vm.selectedPage === 'petrol'}">
                     <a ui-sref="petrol">Petrol</a>
                 </li>
-                <li>
+                <li ng-class="{'selected':vm.selectedPage === 'concerts'}">
                     <a ui-sref="concerts">Concerts</a>
                 </li>
 
